@@ -13,6 +13,6 @@ export class EmployeeMemoryRepository implements EmployeeRepository {
   }
 
   cloneEmployee(employee: Employee): Employee {
-    return new Employee(employee.id, employee.name);
+    return new Employee(employee.id, employee.firstName, employee.lastName);
   }
 }

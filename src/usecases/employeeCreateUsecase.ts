@@ -1,5 +1,5 @@
 import { EmployeeCreateInputData } from "./employeeCreateInputData";
 
-export interface EmployeeSaveUsecase {
+export interface EmployeeCreateUsecase {
   handle: (inputData: EmployeeCreateInputData) => void;
 }
