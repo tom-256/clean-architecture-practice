@@ -1,6 +1,6 @@
-import { Employee } from "../entity/employee";
+import { Employee } from "../enitty/employee";
 
-export interface IEmployeeRepository {
+export interface EmployeeRepository {
   save(employee: Employee): void;
   findById(id: string): Employee;
   cloneEmployee(employee: Employee): Employee;

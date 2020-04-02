@@ -1,4 +1,4 @@
-import { IEmployeeCreatePresenter } from "./IEmployeeCreatePresenter";
+import { EmployeeCreatePresenter } from "./IEmployeeCreatePresenter";
 import { EmployeeCreateOutputData } from "../usecases/employeeCreateOutputData";
 
 export class JapaneseEmployeeCreateViewModel {
@@ -10,8 +10,9 @@ export class JapaneseEmployeeCreateViewModel {
   }
 }
 
-export class JapaneseEmployeeCreatePresenter implements IEmployeeCreatePresenter {
-  complete(outputData: EmployeeCreateOutputData) {
+export class JapaneseEmployeeCreatePresenter
+  implements EmployeeCreatePresenter {
+  complete(outputData: EmployeeCreateOutputData): void {
     const userId = outputData.id;
     const userName = `${outputData.lastName} ${outputData.firstName}`;
     const model = new JapaneseEmployeeCreateViewModel(userId, userName);
