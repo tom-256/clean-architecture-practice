@@ -1,7 +1,7 @@
 import { Employee } from "../entity/employee";
-import { IEmployeeRepository } from "./employeeRepository";
+import { EmployeeRepository } from "./employeeRepository";
 
-export class EmployeeMemoryRepository implements IEmployeeRepository {
+export class EmployeeMemoryRepository implements EmployeeRepository {
   private memoryStorage = new Map();
 
   save(employee: Employee): void {
