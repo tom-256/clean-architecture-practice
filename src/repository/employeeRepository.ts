@@ -1,4 +1,4 @@
-import { Employee } from "../entity/employee";
+import { Employee } from "../enitty/employee";
 
 export interface EmployeeRepository {
   save(employee: Employee): void;

@@ -1,5 +1,5 @@
-import { Employee } from "../entity/employee";
 import { EmployeeRepository } from "./employeeRepository";
+import { Employee } from "../enitty/employee";
 
 export class EmployeeMemoryRepository implements EmployeeRepository {
   private memoryStorage = new Map();

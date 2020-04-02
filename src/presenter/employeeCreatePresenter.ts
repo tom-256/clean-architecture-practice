@@ -1,4 +1,3 @@
-import { IEmployeeCreatePresenter } from "./IEmployeeCreatePresenter";
 import { EmployeeCreateOutputData } from "../usecases/employeeCreateOutputData";
 
 export class EmployeeCreateViewModel {
@@ -10,8 +9,8 @@ export class EmployeeCreateViewModel {
   }
 }
 
-export class EmployeeCreatePresenter implements IEmployeeCreatePresenter {
-  complete(outputData: EmployeeCreateOutputData) {
+export class EmployeeCreatePresenter implements EmployeeCreatePresenter {
+  complete(outputData: EmployeeCreateOutputData): void {
     const userId = outputData.id;
     const userName = `${outputData.firstName} ${outputData.lastName}`;
     const model = new EmployeeCreateViewModel(userId, userName);
