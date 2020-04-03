@@ -19,8 +19,8 @@ export class EmployeeCreateInteractor implements EmployeeCreateUsecase {
 
   handle(inputData: EmployeeCreateInputData): void {
     const employeeId = inputData.id;
-    const duplicateUser = this.employeeRepository.findById(employeeId);
-    if (duplicateUser !== null) {
+    const duplicateEmployee = this.employeeRepository.findById(employeeId);
+    if (duplicateEmployee !== null) {
       throw new Error("duplicated");
     }
 
